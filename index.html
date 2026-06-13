@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ky">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Бегимайдын Кыз Узатуу салтанатына чакыруу баракчасы. Биздин кубанычыбызга ортоктош болуңуздар!">
+  <title>"Элеонора" — Кыз Узатуу Чакыруу</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts: Great Vibes (elegant calligraphy) and Playfair Display (premium serif) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Music Toggle Button -->
+  <button id="music-toggle" class="music-btn" aria-label="Музыка ойнотуу/тындыруу">
+    <svg class="music-vinyl-svg" viewBox="0 0 100 100" width="100%" height="100%">
+      <circle cx="50" cy="50" r="45" fill="#4A3728" stroke="#D4AF37" stroke-width="3" />
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="6 3" />
+      <circle cx="50" cy="50" r="20" fill="none" stroke="#D4AF37" stroke-width="1" />
+      <circle cx="50" cy="50" r="12" fill="#D4AF37" />
+      <path d="M47 38 L47 62 L58 56 Z" fill="#FFFDF4" />
+    </svg>
+    <span class="music-note-badge">🎵</span>
+  </button>
+  <!-- 
+    === МУЗЫКА ИНСТРУКЦИЯСЫ / ИНСТРУКЦИЯ К МУЗЫКЕ ===
+    Өз музыкаңызды плеерге кантип кошууга болот:
+    1. Жергиликтүү файл (Локальный файл): Өзүңүздүн музыка файлыңызды ушул эле долбоордун папкасына салып,
+       төмөнкү src="music.mp3" дегенди src="сиздин-файлдын-аты.mp3" деп алмаштырыңыз.
+    2. Тышкы шилтеме (Прямая ссылка): Эгер музыка интернетте жүктөө шилтемеси менен турса,
+       src="https://мисал.домен/музыка.mp3" деп шилтемесин түз жазып койсоңуз болот.
+  -->
+  <audio id="bg-music" src="vamp/vamplug_-_me_pierdo_(SkySound.cc).mp3" loop></audio>
+
+  <!-- Background Decorative Patterns outside mobile container (shown only on desktop screens) -->
+  <div class="desktop-bg-pattern desktop-left-pattern">
+    <svg viewBox="0 0 100 800" width="100%" height="100%" fill="none" stroke="#D4AF37" stroke-width="1.5"
+      opacity="0.18">
+      <line x1="50" y1="30" x2="50" y2="770" stroke-dasharray="5 5" />
+      <g transform="translate(0, 0)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <g transform="translate(0, 200)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <g transform="translate(0, 400)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <path d="M 50 240 L 60 250 L 50 260 L 40 250 Z" fill="#D4AF37" />
+      <path d="M 50 440 L 60 450 L 50 460 L 40 450 Z" fill="#D4AF37" />
+      <path d="M 50 640 L 60 650 L 50 660 L 40 650 Z" fill="#D4AF37" />
+    </svg>
+  </div>
+  <div class="desktop-bg-pattern desktop-right-pattern">
+    <svg viewBox="0 0 100 800" width="100%" height="100%" fill="none" stroke="#D4AF37" stroke-width="1.5"
+      opacity="0.18">
+      <line x1="50" y1="30" x2="50" y2="770" stroke-dasharray="5 5" />
+      <g transform="translate(0, 0)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <g transform="translate(0, 200)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <g transform="translate(0, 400)">
+        <path
+          d="M 50 150 C 30 150, 10 135, 10 120 C 10 105, 25 100, 35 100 C 45 100, 48 110, 40 118 C 32 126, 22 122, 22 115 C 22 110, 28 109, 31 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 135, 90 120 C 90 105, 75 100, 65 100 C 55 100, 52 110, 60 118 C 68 126, 78 122, 78 115 C 78 110, 72 109, 69 112"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 30 150, 10 165, 10 180 C 10 195, 25 200, 35 200 C 45 200, 48 190, 40 182 C 32 174, 22 178, 22 171 C 22 166, 28 165, 31 168"
+          stroke-linecap="round" />
+        <path
+          d="M 50 150 C 70 150, 90 165, 90 180 C 90 195, 75 200, 65 200 C 55 200, 52 190, 60 182 C 68 174, 78 178, 78 171 C 78 166, 72 165, 69 168"
+          stroke-linecap="round" />
+      </g>
+      <path d="M 50 240 L 60 250 L 50 260 L 40 250 Z" fill="#D4AF37" />
+      <path d="M 50 440 L 60 450 L 50 460 L 40 450 Z" fill="#D4AF37" />
+      <path d="M 50 640 L 60 650 L 50 660 L 40 650 Z" fill="#D4AF37" />
+    </svg>
+  </div>
+
+  <!-- Main Mobile-First Application Container (Max-Width: 480px, Centered) -->
+  <div class="app-container">
+    <!-- Traditional Side Ornaments running down the edges -->
+    <div class="mobile-side-pattern mobile-left-pattern"></div>
+    <div class="mobile-side-pattern mobile-right-pattern"></div>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <header class="section-hero">
+      <div class="hero-decorative-frame">
+        <div class="frame-border"></div>
+        <div class="corner-ornament co-top-left"></div>
+        <div class="corner-ornament co-top-right"></div>
+        <div class="corner-ornament co-bottom-left"></div>
+        <div class="corner-ornament co-bottom-right"></div>
+      </div>
+
+      <div class="hero-content">
+        <!-- Elegant Calligraphic Bride Name Showcase with Crown Ornament -->
+        <div class="bride-title-container">
+          <svg class="bride-crown-ornament" viewBox="0 0 200 50">
+            <path
+              d="M 20 40 Q 100 10 180 40 M 100 10 C 90 10, 80 25, 90 30 C 100 35, 110 25, 110 20 C 110 15, 105 10, 100 10 M 60 25 C 55 25, 50 35, 57 37 C 64 39, 70 30, 68 27 M 140 25 C 145 25, 150 35, 143 37 C 136 39, 130 30, 132 27"
+              fill="none" stroke="#D4AF37" stroke-width="2" />
+            <circle cx="100" cy="10" r="3" fill="#D4AF37" />
+            <circle cx="57" cy="25" r="2" fill="#D4AF37" />
+            <circle cx="143" cy="25" r="2" fill="#D4AF37" />
+          </svg>
+          <h1 class="bride-title reveal assemble-letters">Элеонора</h1>
+        </div>
+        <div class="hero-subtitle-container reveal reveal-slide-up" style="transition-delay: 0.2s;">
+          <span class="sub-ornament-line"></span>
+          <p class="hero-subtitle">КЫЗ УЗАТУУ</p>
+          <span class="sub-ornament-line"></span>
+        </div>
+
+        <!-- ============================================================
+          ФОТО НЕВЕСТЫ / ФОТО КЕЛИНЧЕКТИН НУСКАМАСЫ
+          ============================================================
+          Өз сүрөтүңүздү кошуу үчүн 2 кадам:
+
+          1. Сүрөт файлыңызды (мисалы: brides-photo.jpg) ушул
+             долбоордун папкасына коюңуз (index.html жанына).
+
+          2. Төмөнкү <img> тегиндеги  src=""  деген жерге
+             файлдын атын жазыңыз, мисалы:
+               src="brides-photo.jpg"
+
+          Сүрөт автоматтык түрдө рамкага туура ылайыкталат.
+          Эгер src бош калса — алтын жасалгалуу заглушка көрүнөт.
+          ============================================================ -->
+        <div class="photo-placeholder-frame reveal reveal-zoom-in" style="transition-delay: 0.4s;">
+          <img id="bride-photo" class="bride-photo-img" src="vamp/Gemini_Generated_Image_jwd30jjwd30jjwd3.png"
+            alt="vamp"
+            onerror="this.style.display='none'; document.getElementById('bride-placeholder').style.display='flex';"
+            onload="this.style.display='block'; document.getElementById('bride-placeholder').style.display='none';">
+
+          <!-- Алтын заглушка (жашынган болот, сүрөт коюлганда) -->
+          <div id="bride-placeholder" class="inner-placeholder-gradient">
+            <svg class="placeholder-ornament-svg" viewBox="0 0 100 100">
+              <path
+                d="M 50 15 C 35 15, 20 28, 20 45 C 20 65, 50 85, 50 85 C 50 85, 80 65, 80 45 C 80 28, 65 15, 50 15 Z"
+                fill="none" stroke="#D4AF37" stroke-width="2" />
+              <path
+                d="M 50 25 C 42 25, 30 32, 30 45 C 30 57, 50 72, 50 72 C 50 72, 70 57, 70 45 C 70 32, 58 25, 50 25 Z"
+                fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 2" />
+              <circle cx="50" cy="45" r="5" fill="#D4AF37" />
+            </svg>
+            <span class="placeholder-text-label">Фото Невесты</span>
+          </div>
+        </div>
+
+        <!-- Animated scroll down helper -->
+        <div class="scroll-prompt reveal reveal-slide-up" style="transition-delay: 0.6s;">
+          <span class="arrow-down"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 2: WELCOME TEXT -->
+    <section class="section section-welcome text-center">
+      <!-- Kochkor Muyuz (Traditional Horns) Kyrgyz Ornament Divider SVG -->
+      <div class="national-ornament-wrapper reveal reveal-slide-down">
+        <svg class="horns-ornament-svg" viewBox="0 0 200 80">
+          <path
+            d="M 100 65 C 75 65, 55 50, 45 30 C 35 10, 45 0, 60 0 C 75 0, 80 15, 70 25 C 60 35, 45 30, 45 20 C 45 12, 53 10, 58 15 M 100 65 C 125 65, 145 50, 155 30 C 165 10, 155 0, 140 0 C 125 0, 120 15, 130 25 C 140 35, 155 30, 155 20 C 155 12, 147 10, 142 15"
+            fill="none" stroke="#D4AF37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="100" cy="65" r="4.5" fill="#D4AF37" />
+        </svg>
+      </div>
+
+      <div class="welcome-card reveal reveal-slide-up" style="transition-delay: 0.2s;">
+        <!-- Card corner ornaments -->
+        <svg class="card-corner cc-top-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-top-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <p class="salutation assemble-words">Урматтуу коноктор!</p>
+        <p class="welcome-main-text">
+          СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ <span class="highlight-name">Элеоноранын</span> кыз узатуу тоюна арналган салтанатка
+          келип, ак дасторкон үстүндө кадырлуу коногубуз болуп, ак батаңыздарды берип кетүүгө чакырабыз!
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CALENDAR (June 2026 Calendar Grid) -->
+    <section class="section section-calendar text-center">
+      <div class="heading-wrapper">
+        <svg class="heading-wing-ornament wing-left" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+        <h2 class="calendar-month-title reveal assemble-words">Июнь</h2>
+        <svg class="heading-wing-ornament wing-right" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+      </div>
+
+      <div class="calendar-wrapper reveal reveal-zoom-in" style="transition-delay: 0.2s;">
+        <!-- Card corner ornaments -->
+        <svg class="card-corner cc-top-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-top-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <div class="calendar-frame-borders"></div>
+        <div class="calendar-grid">
+          <!-- Calendar Days of Week headers -->
+          <div class="day-header">Дш</div>
+          <div class="day-header">Ше</div>
+          <div class="day-header">Ша</div>
+          <div class="day-header">Бш</div>
+          <div class="day-header">Жм</div>
+          <div class="day-header">Иш</div>
+          <div class="day-header">Жк</div>
+
+          <!-- June 2026 dates (June 1st is Monday) -->
+          <div class="day-cell">1</div>
+          <div class="day-cell">2</div>
+          <div class="day-cell">3</div>
+          <div class="day-cell">4</div>
+          <div class="day-cell">5</div>
+          <div class="day-cell">6</div>
+          <div class="day-cell">7</div>
+          <div class="day-cell">8</div>
+          <div class="day-cell">9</div>
+          <div class="day-cell">10</div>
+          <div class="day-cell">11</div>
+          <div class="day-cell">12</div>
+          <div class="day-cell">13</div>
+          <div class="day-cell">14</div>
+          <div class="day-cell">15</div>
+          <div class="day-cell">16</div>
+          <div class="day-cell">17</div>
+          <div class="day-cell">18</div>
+          <div class="day-cell">19</div>
+          <div class="day-cell">20</div>
+          <div class="day-cell">21</div>
+          <div class="day-cell">22</div>
+
+          <!-- Date 23 is Tuesday, circled by a custom animated CSS heart -->
+          <div class="day-cell highlighted-date">
+            <span class="date-number">23</span>
+            <div class="svg-heart-container">
+              <svg viewBox="0 0 100 100" class="heart-pulse-svg">
+                <path
+                  d="M 50 80 C 50 80, 18 55, 18 35 C 18 20, 32 10, 50 28 C 68 10, 82 20, 82 35 C 82 55, 50 80, 50 80 Z"
+                  fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="day-cell">24</div>
+          <div class="day-cell">25</div>
+          <div class="day-cell">26</div>
+          <div class="day-cell">27</div>
+          <div class="day-cell">28</div>
+          <div class="day-cell">29</div>
+          <div class="day-cell">30</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: COUNTDOWN TIMER -->
+    <section class="section section-timer text-center">
+      <div class="heading-wrapper">
+        <svg class="heading-wing-ornament wing-left" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+        <h3 class="timer-section-heading reveal assemble-words">Салтанатка чейин убакыт калды:</h3>
+        <svg class="heading-wing-ornament wing-right" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+      </div>
+
+      <!-- Timer grid with dynamic JavaScript fields -->
+      <div id="countdown-timer" class="timer-grid-container" data-target="2026-06-23T18:00:00">
+        <div class="timer-unit-box reveal reveal-slide-up" style="transition-delay: 0.1s;">
+          <div id="timer-days" class="timer-digit">00</div>
+          <div class="timer-label">Күн</div>
+        </div>
+        <div class="timer-separator reveal reveal-slide-up" style="transition-delay: 0.15s;">:</div>
+        <div class="timer-unit-box reveal reveal-slide-up" style="transition-delay: 0.2s;">
+          <div id="timer-hours" class="timer-digit">00</div>
+          <div class="timer-label">Саат</div>
+        </div>
+        <div class="timer-separator reveal reveal-slide-up" style="transition-delay: 0.25s;">:</div>
+        <div class="timer-unit-box reveal reveal-slide-up" style="transition-delay: 0.3s;">
+          <div id="timer-minutes" class="timer-digit">00</div>
+          <div class="timer-label">Мүнөт</div>
+        </div>
+        <div class="timer-separator reveal reveal-slide-up" style="transition-delay: 0.35s;">:</div>
+        <div class="timer-unit-box reveal reveal-slide-up" style="transition-delay: 0.4s;">
+          <div id="timer-seconds" class="timer-digit">00</div>
+          <div class="timer-label">Секунд</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 & 6: LOCATION & 2GIS MAP -->
+    <section class="section section-location text-center">
+      <div class="heading-wrapper">
+        <svg class="heading-wing-ornament wing-left" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+        <h3 class="location-heading reveal assemble-words">Дарек \ убактысы:</h3>
+        <svg class="heading-wing-ornament wing-right" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+      </div>
+      <p class="location-address reveal reveal-slide-up" style="transition-delay: 0.1s;">Улица Сагынбая Орозбак уулу, 134/1</p>
+
+      <div class="restaurant-name-showcase reveal reveal-zoom-in" style="transition-delay: 0.2s;">
+        <span class="restaurant-gold-quote">«</span>
+        <h4 class="restaurant-title">Салтанат Холл</h4>
+        <span class="restaurant-gold-quote">»</span>
+        <p class="restaurant-suffix">РЕСТОРАНЫ</p>
+      </div>
+
+      <!-- Styled map block card -->
+      <div class="map-card-wrapper reveal reveal-flip-x" style="transition-delay: 0.3s;">
+        <!-- Card corner ornaments -->
+        <svg class="card-corner cc-top-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-top-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <div class="map-background-grid">
+          <svg width="100%" height="100%" fill="none" stroke="#D4AF37" stroke-width="0.7" opacity="0.08">
+            <pattern id="geometric-mesh" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M 12 0 L 24 12 L 12 24 L 0 12 Z" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#geometric-mesh)" />
+          </svg>
+        </div>
+        <div class="map-card-content">
+          <p class="welcome-hour-hint">Салтанаттуу кече саат 18:00дө башталат.</p>
+          <!-- 2GIS styled button -->
+          <a href="https://2gis.kg/naryn/firm/70000001078840054?m=75.976871%2C41.428337%2F16.66" target="_blank"
+            rel="noopener noreferrer" class="gis-button-link">
+            <span>2ГИС КАРТА</span>
+            <span class="btn-shine-overlay"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: RSVP FORM -->
+    <section class="section section-rsvp text-center">
+      <div class="rsvp-card-container reveal reveal-flip-x">
+        <!-- Card corner ornaments -->
+        <svg class="card-corner cc-top-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-top-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-left" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <svg class="card-corner cc-bottom-right" viewBox="0 0 30 30">
+          <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
+            stroke-width="2" />
+        </svg>
+        <h3 class="rsvp-title assemble-words">Конок анкет асы</h3>
+        <p class="rsvp-subtitle">Келе тургандыгыңызды ырастап коюуну суранабыз:</p>
+
+        <form id="rsvpForm" class="guest-rsvp-form">
+          <!-- Text Input Group -->
+          <div class="rsvp-input-group">
+            <input type="text" id="guestName" name="guestName" class="rsvp-text-input" placeholder="Атыңызды жазыңыз..."
+              required autocomplete="off">
+            <span class="input-focus-underline"></span>
+          </div>
+
+          <!-- Radio attendance options -->
+          <div class="rsvp-radio-options-group">
+            <label class="rsvp-radio-label-container">
+              <input type="radio" name="attendance" value="yes" required>
+              <span class="rsvp-custom-radio-button"></span>
+              <span class="rsvp-radio-text-label">Ооба, сөзсүз келем...</span>
+            </label>
+
+            <label class="rsvp-radio-label-container">
+              <input type="radio" name="attendance" value="no">
+              <span class="rsvp-custom-radio-button"></span>
+              <span class="rsvp-radio-text-label">Жок, бара албайм...</span>
+            </label>
+          </div>
+
+          <!-- Premium Gold-Bordered Submit Button with Alive Shine -->
+          <button type="submit" class="rsvp-submit-btn">
+            <span>ЖИБЕРҮҮ</span>
+            <span class="btn-shine-overlay"></span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 8: GUEST TELEGRAM GROUP & FOOTER -->
+    <section class="section section-telegram text-center">
+      <div class="heading-wrapper">
+        <svg class="heading-wing-ornament wing-left" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+        <h3 class="telegram-section-title reveal assemble-words">Коноктордун атайын тобу:</h3>
+        <svg class="heading-wing-ornament wing-right" viewBox="0 0 80 30">
+          <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
+            fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+          <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
+        </svg>
+      </div>
+
+      <!-- Elegant gold framing for Telegram link -->
+      <div class="telegram-badge-holder reveal reveal-zoom-in" style="transition-delay: 0.2s;">
+        <a href="https://t.me/+example_kyz_uzatuu" class="telegram-circular-ornament-link" target="_blank"
+          rel="noopener noreferrer">
+          <svg class="tg-circular-pattern-svg" viewBox="0 0 100 100">
+            <!-- Decorative borders -->
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#D4AF37" stroke-width="2.5" />
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#D4AF37" stroke-width="0.8" stroke-dasharray="3 3" />
+            <!-- Teeth patterns -->
+            <path d="M 50 4 L 50 8 M 50 92 L 50 96 M 4 50 L 8 50 M 92 50 L 96 50" stroke="#D4AF37" stroke-width="2" />
+            <path d="M 17.5 17.5 L 20.5 20.5 M 82.5 82.5 L 79.5 79.5 M 17.5 82.5 L 20.5 79.5 M 82.5 17.5 L 79.5 20.5"
+              stroke="#D4AF37" stroke-width="1.5" />
+            <!-- Telegram paper plane representation -->
+            <g transform="translate(22, 23) scale(0.56)">
+              <path
+                d="M54 36.6L16.2 51.2C13.6 52.2 13.6 53.7 15.7 54.3L25.4 57.3L47.9 43.1C49 42.4 50 42.8 49.2 43.5L31 59.9L30.3 69.8C31.3 69.8 31.7 69.4 32.2 68.9L36.9 64.3L46.7 71.5C48.5 72.5 49.8 72 50.2 69.8L56.7 39.2C57.4 36.4 55.6 35.1 54 36.6Z"
+                fill="#D4AF37" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="app-footer text-center">
+      <!-- Traditional wave-like yurt-dome top edge SVG -->
+      <div class="footer-dome-curve">
+        <svg viewBox="0 0 600 80" preserveAspectRatio="none" width="100%" height="100%">
+          <path d="M 0 80 Q 300 0 600 80 Z" fill="#4A3728" />
+        </svg>
+      </div>
+
+      <div class="footer-inner-content">
+        <p class="footer-gratitude-title reveal assemble-words">КУБАНЫЧ ЖАНА УРМАТТОО МЕНЕН,</p>
+        <p class="footer-parents-names reveal reveal-slide-up" style="transition-delay: 0.25s;">Чыныбек & Элеонора</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Custom Custom Success Modal Popup instead of standard alert -->
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-ornament-top">
+        <svg viewBox="0 0 100 30" width="80" height="24">
+          <path d="M 10 15 Q 50 5 90 15" fill="none" stroke="#D4AF37" stroke-width="2" />
+          <circle cx="50" cy="11" r="3.5" fill="#D4AF37" />
+        </svg>
+      </div>
+      <h3 class="modal-heading">Рахмат!</h3>
+      <p class="modal-message">Сиздин жообуңуз ийгиликтүү кабыл алынды. Салтанатыбызда көрүшкөнчө!</p>
+      <button id="modal-close-btn" class="modal-btn">ЖАБУУ</button>
+    </div>
+  </div>
+
+  <!-- Bride Photo Init: hide img if src is empty, show placeholder instead -->
+  <script>
+    (function () {
+      var img = document.getElementById('bride-photo');
+      var placeholder = document.getElementById('bride-placeholder');
+      if (img && placeholder) {
+        if (!img.src || img.src === window.location.href) {
+          // src is empty — hide the broken-image icon, show golden placeholder
+          img.style.display = 'none';
+          placeholder.style.display = 'flex';
+        } else {
+          // src is set — show img, hide placeholder (onload/onerror handles errors)
+          placeholder.style.display = 'none';
+        }
+      }
+    })();
+  </script>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
