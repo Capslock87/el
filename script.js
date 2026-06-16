@@ -60,25 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const note = document.createElement('span');
       note.className = 'floating-note';
       note.textContent = noteEmojis[Math.floor(Math.random() * noteEmojis.length)];
-      
+
       // Position at center of button
       const x = btnRect.left + btnRect.width / 2;
       const y = btnRect.top + btnRect.height / 2;
-      
+
       note.style.left = `${x - 10}px`;
       note.style.top = `${y - 10}px`;
-      
+
       // Fly leftwards and downwards (since button is fixed at top right)
       const xOffset = -20 - Math.random() * 50;
       const yOffset = 30 + Math.random() * 60;
       const rotOffset = (Math.random() - 0.5) * 90;
-      
+
       note.style.setProperty('--x-offset', `${xOffset}px`);
       note.style.setProperty('--y-offset', `${yOffset}px`);
       note.style.setProperty('--rot-offset', `${rotOffset}deg`);
-      
+
       document.body.appendChild(note);
-      
+
       setTimeout(() => {
         note.remove();
       }, 2200);
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 2. LIVE COUNTDOWN TIMER (June 23, 2026)
+  // 2. LIVE COUNTDOWN TIMER (November 20, 2026)
   // ==========================================
   const timerContainer = document.getElementById('countdown-timer');
   const daysEl = document.getElementById('timer-days');
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const secondsEl = document.getElementById('timer-seconds');
 
   if (timerContainer && daysEl && hoursEl && minutesEl && secondsEl) {
-    const targetString = timerContainer.getAttribute('data-target') || '2026-06-23T18:00:00';
+    const targetString = timerContainer.getAttribute('data-target') || '2026-11-20T18:00:00';
     const targetDate = new Date(targetString).getTime();
 
     function updateTimer() {

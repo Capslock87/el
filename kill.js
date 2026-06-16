@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const minutesEl = document.getElementById('minutes');
   const secondsEl = document.getElementById('seconds');
   if (timerContainer) {
-    // Target date: June 23, 2026 at 18:00:00 (Local Time)
-    const targetDateStr = timerContainer.getAttribute('data-target-date') || '2026-06-23T18:00:00';
+    // Target date: November 20, 2026 at 18:00:00 (Local Time)
+    const targetDateStr = timerContainer.getAttribute('data-target-date') || '2026-11-20T18:00:00';
     const targetDate = new Date(targetDateStr).getTime();
     const updateCountdown = () => {
       const now = new Date().getTime();

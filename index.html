@@ -41,7 +41,7 @@
     2. Тышкы шилтеме (Прямая ссылка): Эгер музыка интернетте жүктөө шилтемеси менен турса,
        src="https://мисал.домен/музыка.mp3" деп шилтемесин түз жазып койсоңуз болот.
   -->
-  <audio id="bg-music" src="vamp/vamplug_-_me_pierdo_(SkySound.cc).mp3" loop></audio>
+  <audio id="bg-music" src="vamp/WhatsApp Audio 2026-06-15 at 18.14.40.mpeg" loop></audio>
 
   <!-- Background Decorative Patterns outside mobile container (shown only on desktop screens) -->
   <div class="desktop-bg-pattern desktop-left-pattern">
@@ -155,75 +155,62 @@
 
     <!-- SECTION 1: HERO SECTION -->
     <header class="section-hero">
-      <div class="hero-decorative-frame">
-        <div class="frame-border"></div>
-        <div class="corner-ornament co-top-left"></div>
-        <div class="corner-ornament co-top-right"></div>
-        <div class="corner-ornament co-bottom-left"></div>
-        <div class="corner-ornament co-bottom-right"></div>
+
+      <!-- ======================================================
+        ФОТО НЕВЕСТЫ — НУСКАМА / ИНСТРУКЦИЯ
+        ======================================================
+        1. Файл сүрөтүңүздү ушул папкага салыңыз (index.html жанына).
+        2. Төмөнкү <img> тегиндеги src="" деген жерге атын жазыңыз:
+              src="photo.jpg"
+        Эгер src бош болсо — алтын заглушка автоматтык чыгат.
+        ====================================================== -->
+
+      <!-- BRIDE PORTRAIT — frameless, full-bleed at top -->
+      <div class="bride-portrait-wrap reveal reveal-zoom-in">
+        <img
+          id="bride-photo"
+          class="bride-portrait-img"
+          src="vamp/Gemini_Generated_Image_jwd30jjwd30jjwd3.png"
+          alt="Фото Невесты — Элеонора"
+          onerror="this.style.display='none'; document.getElementById('bride-placeholder').style.display='flex';"
+          onload="this.style.display='block'; document.getElementById('bride-placeholder').style.display='none';">
+        <!-- Golden placeholder when no photo is set -->
+        <div id="bride-placeholder" class="bride-portrait-placeholder">
+          <svg class="placeholder-ornament-svg" viewBox="0 0 100 100">
+            <path d="M 50 15 C 35 15, 20 28, 20 45 C 20 65, 50 85, 50 85 C 50 85, 80 65, 80 45 C 80 28, 65 15, 50 15 Z" fill="none" stroke="#D4AF37" stroke-width="2"/>
+            <path d="M 50 25 C 42 25, 30 32, 30 45 C 30 57, 50 72, 50 72 C 50 72, 70 57, 70 45 C 70 32, 58 25, 50 25 Z" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 2"/>
+            <circle cx="50" cy="45" r="5" fill="#D4AF37"/>
+          </svg>
+          <span class="placeholder-text-label">Фото Невесты</span>
+        </div>
+        <!-- Subtle gold shimmer vignette at the bottom of the photo -->
+        <div class="bride-portrait-vignette"></div>
       </div>
 
-      <div class="hero-content">
-        <!-- Elegant Calligraphic Bride Name Showcase with Crown Ornament -->
-        <div class="bride-title-container">
-          <svg class="bride-crown-ornament" viewBox="0 0 200 50">
-            <path
-              d="M 20 40 Q 100 10 180 40 M 100 10 C 90 10, 80 25, 90 30 C 100 35, 110 25, 110 20 C 110 15, 105 10, 100 10 M 60 25 C 55 25, 50 35, 57 37 C 64 39, 70 30, 68 27 M 140 25 C 145 25, 150 35, 143 37 C 136 39, 130 30, 132 27"
-              fill="none" stroke="#D4AF37" stroke-width="2" />
-            <circle cx="100" cy="10" r="3" fill="#D4AF37" />
-            <circle cx="57" cy="25" r="2" fill="#D4AF37" />
-            <circle cx="143" cy="25" r="2" fill="#D4AF37" />
-            
-          </svg>
-          <h1 class="bride-title reveal assemble-letters">Элеонора</h1>
-        </div>
-        <div class="hero-subtitle-container reveal reveal-slide-up" style="transition-delay: 0.2s;">
+      <!-- TEXT BLOCK: floats below the photo with space -->
+      <div class="hero-text-block">
+        <!-- Crown ornament above the name -->
+        <svg class="bride-crown-ornament reveal reveal-slide-down" viewBox="0 0 200 50">
+          <path d="M 20 40 Q 100 10 180 40 M 100 10 C 90 10, 80 25, 90 30 C 100 35, 110 25, 110 20 C 110 15, 105 10, 100 10 M 60 25 C 55 25, 50 35, 57 37 C 64 39, 70 30, 68 27 M 140 25 C 145 25, 150 35, 143 37 C 136 39, 130 30, 132 27" fill="none" stroke="#D4AF37" stroke-width="2"/>
+          <circle cx="100" cy="10" r="3" fill="#D4AF37"/>
+          <circle cx="57"  cy="25" r="2" fill="#D4AF37"/>
+          <circle cx="143" cy="25" r="2" fill="#D4AF37"/>
+        </svg>
+
+        <h1 class="bride-title reveal assemble-letters" style="transition-delay: 0.1s;">Элеонора</h1>
+
+        <div class="hero-subtitle-container reveal reveal-slide-up" style="transition-delay: 0.25s;">
           <span class="sub-ornament-line"></span>
           <p class="hero-subtitle">КЫЗ УЗАТУУ</p>
           <span class="sub-ornament-line"></span>
         </div>
 
-        <!-- ============================================================
-          ФОТО НЕВЕСТЫ / ФОТО КЕЛИНЧЕКТИН НУСКАМАСЫ
-          ============================================================
-          Өз сүрөтүңүздү кошуу үчүн 2 кадам:
-
-          1. Сүрөт файлыңызды (мисалы: brides-photo.jpg) ушул
-             долбоордун папкасына коюңуз (index.html жанына).
-
-          2. Төмөнкү <img> тегиндеги  src=""  деген жерге
-             файлдын атын жазыңыз, мисалы:
-               src="brides-photo.jpg"
-
-          Сүрөт автоматтык түрдө рамкага туура ылайыкталат.
-          Эгер src бош калса — алтын жасалгалуу заглушка көрүнөт.
-          ============================================================ -->
-        <div class="photo-placeholder-frame reveal reveal-zoom-in" style="transition-delay: 0.4s;">
-          <img id="bride-photo" class="bride-photo-img" src="vamp/Gemini_Generated_Image_jwd30jjwd30jjwd3.png"
-            alt="vamp"
-            onerror="this.style.display='none'; document.getElementById('bride-placeholder').style.display='flex';"
-            onload="this.style.display='block'; document.getElementById('bride-placeholder').style.display='none';">
-
-          <!-- Алтын заглушка (жашынган болот, сүрөт коюлганда) -->
-          <div id="bride-placeholder" class="inner-placeholder-gradient">
-            <svg class="placeholder-ornament-svg" viewBox="0 0 100 100">
-              <path
-                d="M 50 15 C 35 15, 20 28, 20 45 C 20 65, 50 85, 50 85 C 50 85, 80 65, 80 45 C 80 28, 65 15, 50 15 Z"
-                fill="none" stroke="#D4AF37" stroke-width="2" />
-              <path
-                d="M 50 25 C 42 25, 30 32, 30 45 C 30 57, 50 72, 50 72 C 50 72, 70 57, 70 45 C 70 32, 58 25, 50 25 Z"
-                fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3 2" />
-              <circle cx="50" cy="45" r="5" fill="#D4AF37" />
-            </svg>
-            <span class="placeholder-text-label">Фото Невесты</span>
-          </div>
-        </div>
-
-        <!-- Animated scroll down helper -->
-        <div class="scroll-prompt reveal reveal-slide-up" style="transition-delay: 0.6s;">
+        <!-- Scroll down arrow -->
+        <div class="scroll-prompt reveal reveal-slide-up" style="transition-delay: 0.4s;">
           <span class="arrow-down"></span>
         </div>
       </div>
+
     </header>
 
     <!-- SECTION 2: WELCOME TEXT -->
@@ -272,7 +259,7 @@
             fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
           <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
         </svg>
-        <h2 class="calendar-month-title reveal assemble-words">Июнь</h2>
+        <h2 class="calendar-month-title reveal assemble-words">Ноябрь</h2>
         <svg class="heading-wing-ornament wing-right" viewBox="0 0 80 30">
           <path d="M 10 15 C 30 15, 40 5, 50 5 C 60 5, 65 12, 60 18 C 55 24, 45 20, 45 15 C 45 10, 50 8, 53 11"
             fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
@@ -309,8 +296,16 @@
           <div class="day-header">Иш</div>
           <div class="day-header">Жк</div>
 
-          <!-- June 2026 dates (June 1st is Monday) -->
+          <!-- November 2026 dates (November 1st is Sunday) -->
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
           <div class="day-cell">1</div>
+
+          <!-- Second week -->
           <div class="day-cell">2</div>
           <div class="day-cell">3</div>
           <div class="day-cell">4</div>
@@ -318,6 +313,8 @@
           <div class="day-cell">6</div>
           <div class="day-cell">7</div>
           <div class="day-cell">8</div>
+
+          <!-- Third week -->
           <div class="day-cell">9</div>
           <div class="day-cell">10</div>
           <div class="day-cell">11</div>
@@ -325,17 +322,14 @@
           <div class="day-cell">13</div>
           <div class="day-cell">14</div>
           <div class="day-cell">15</div>
+
+          <!-- Fourth week: Nov 20 is Friday, highlighted with heart -->
           <div class="day-cell">16</div>
           <div class="day-cell">17</div>
           <div class="day-cell">18</div>
           <div class="day-cell">19</div>
-          <div class="day-cell">20</div>
-          <div class="day-cell">21</div>
-          <div class="day-cell">22</div>
-
-          <!-- Date 23 is Tuesday, circled by a custom animated CSS heart -->
           <div class="day-cell highlighted-date">
-            <span class="date-number">23</span>
+            <span class="date-number">20</span>
             <div class="svg-heart-container">
               <svg viewBox="0 0 100 100" class="heart-pulse-svg">
                 <path
@@ -344,14 +338,26 @@
               </svg>
             </div>
           </div>
+          <div class="day-cell">21</div>
+          <div class="day-cell">22</div>
 
+          <!-- Fifth week -->
+          <div class="day-cell">23</div>
           <div class="day-cell">24</div>
           <div class="day-cell">25</div>
           <div class="day-cell">26</div>
           <div class="day-cell">27</div>
           <div class="day-cell">28</div>
           <div class="day-cell">29</div>
+
+          <!-- Sixth week -->
           <div class="day-cell">30</div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
+          <div class="day-cell"></div>
         </div>
       </div>
     </section>
@@ -373,7 +379,7 @@
       </div>
 
       <!-- Timer grid with dynamic JavaScript fields -->
-      <div id="countdown-timer" class="timer-grid-container" data-target="2026-06-23T18:00:00">
+      <div id="countdown-timer" class="timer-grid-container" data-target="2026-11-20T18:00:00">
         <div class="timer-unit-box reveal reveal-slide-up" style="transition-delay: 0.1s;">
           <div id="timer-days" class="timer-digit">00</div>
           <div class="timer-label">Күн</div>
@@ -411,13 +417,13 @@
           <circle cx="10" cy="15" r="2.5" fill="#D4AF37" />
         </svg>
       </div>
-      <p class="location-address reveal reveal-slide-up" style="transition-delay: 0.1s;">Улица Сагынбая Орозбак уулу, 134/1</p>
+      <p class="location-address reveal reveal-slide-up" style="transition-delay: 0.1s;">Улица Чон-Алыш, 105Б</p>
 
       <div class="restaurant-name-showcase reveal reveal-zoom-in" style="transition-delay: 0.2s;">
         <span class="restaurant-gold-quote">«</span>
-        <h4 class="restaurant-title">Салтанат Холл</h4>
+        <h4 class="restaurant-title">Кош келиниздер</h4>
         <span class="restaurant-gold-quote">»</span>
-        <p class="restaurant-suffix">РЕСТОРАНЫ</p>
+        <p class="restaurant-suffix"></p>
       </div>
 
       <!-- Styled map block card -->
@@ -450,7 +456,7 @@
         <div class="map-card-content">
           <p class="welcome-hour-hint">Салтанаттуу кече саат 18:00дө башталат.</p>
           <!-- 2GIS styled button -->
-          <a href="https://2gis.kg/naryn/firm/70000001078840054?m=75.976871%2C41.428337%2F16.66" target="_blank"
+          <a href="https://2gis.kg/bishkek/geo/70030076644245044/75.967891,41.421767" target="_blank"
             rel="noopener noreferrer" class="gis-button-link">
             <span>2ГИС КАРТА</span>
             <span class="btn-shine-overlay"></span>
@@ -479,7 +485,7 @@
           <path d="M 2 28 L 2 2 C 2 2, 15 2, 15 10 C 15 15, 8 15, 8 10 C 8 7, 11 6, 12 8" fill="none" stroke="#D4AF37"
             stroke-width="2" />
         </svg>
-        <h3 class="rsvp-title assemble-words">Конок анкет асы</h3>
+        <h3 class="rsvp-title assemble-words">Конок  анкетасы</h3>
         <p class="rsvp-subtitle">Келе тургандыгыңызды ырастап коюуну суранабыз:</p>
 
         <form id="rsvpForm" class="guest-rsvp-form">
